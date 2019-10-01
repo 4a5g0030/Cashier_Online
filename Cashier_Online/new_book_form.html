@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function check()
+        {
+            if(new_book.book_name.value=="")
+            {
+                alert("請輸入活動名稱");
+                return false
+            }
+            else
+            {
+                new_book.submit();
+            }
+        }
+    </script>
+    <title>新增活動</title>
+</head>
+<body>
+<p>
+<h1>新增活動</h1>
+</p>
+<form name="new_book" method="post" action="addbook.php">
+    <p>
+        活動名稱 :<br>
+        <input type="text" name="book_name"/>
+    </p>
+    <p>
+        <input onclick="check()" type="button" value="新增">
+    </p>
+</form>
+</body>
+</html>

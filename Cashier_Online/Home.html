@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function check()
+            {
+                if(SingIn.account.value=="" || SingIn.password.value=="")
+                {
+                    alert("請輸入帳號密碼");
+                    return false;
+                }
+                else
+                {
+                    SingIn.submit();
+                }
+            }
+        </script>
+        <title>登入系統</title>
+    </head>
+    <body>
+        <p>
+            <h1>登入系統</h1>
+        </p>
+        <form name="SingIn" method="post" action="SingIn.php">
+            <p>
+                帳號 :<br>
+                <input type="text" name="account"/>
+            </p>
+            <p>
+                密碼 :<br>
+                <input type="password" name="password"/>
+            </p>
+            <p>
+                <input onclick="check()" type="button" value="登入">
+            </p>
+        </form>
+        <p>
+            <a href="Join.html"><input type="button" value="註冊"></a>
+        </p>
+    </body>
+</html>

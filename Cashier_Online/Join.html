@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function check()
+            {
+                if(Join.username.value==""||Join.account==""||Join.password.value==""||Join.re_password.value==""||Join.e_mail.value==""||Join.phone.value=="")
+                {
+                    alert("表單請勿空白");
+                    return false
+                }
+                else if(Join.password.value!=Join.re_password.value)
+                {
+                    alert("密碼確認錯誤")
+                    return false
+                }
+                else
+                {
+                    Join.submit();
+                }
+            }
+        </script>
+        <title>註冊</title>
+    </head>
+    <body>
+        <p>
+            <h1>會員註冊</h1>
+        </p>
+        <form name="Join" method="post" action="addmember.php">
+            <p>
+                姓名 :<br>
+                <input type="text" name="username"/>
+            </p>
+            <p>
+                帳號 :<br>
+                <input type="text" name="account"/>
+            </p>
+            <p>
+                密碼 :<br>
+                <input type="password" name="password"/>
+            </p>
+            <p>
+                密碼確認 :<br>
+                <input type="password" name="re_password"/>
+            </p>
+            <p>
+                E-Mail :<br>
+                <input type="email" name="e_mail"/>
+            </p>
+            <p>
+                連絡電話 :<br>
+                <input type="text" name="phone"/>
+            </p>
+            <p>
+                <input onclick="check()" type="button" value="註冊">
+            </p>
+        </form>
+    </body>
+</html>
